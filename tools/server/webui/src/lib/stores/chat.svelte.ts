@@ -1575,6 +1575,10 @@ class ChatStore {
 
 		if (currentConfig.systemMessage) apiOptions.systemMessage = currentConfig.systemMessage;
 
+		if (currentConfig.enableThinking !== undefined) {
+			apiOptions.enableThinking = currentConfig.enableThinking;
+		}
+
 		if (currentConfig.disableReasoningParsing) apiOptions.disableReasoningParsing = true;
 
 		if (currentConfig.excludeReasoningFromContext) apiOptions.excludeReasoningFromContext = true;

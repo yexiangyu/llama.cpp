@@ -307,6 +307,11 @@
 					type: SettingsFieldType.CHECKBOX
 				},
 				{
+					key: SETTINGS_KEYS.ENABLE_THINKING,
+					label: 'Enable thinking/reasoning mode',
+					type: SettingsFieldType.CHECKBOX
+				},
+				{
 					key: SETTINGS_KEYS.DISABLE_REASONING_PARSING,
 					label: 'Disable server-side thinking extraction',
 					type: SettingsFieldType.CHECKBOX

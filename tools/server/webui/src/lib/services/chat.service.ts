@@ -81,6 +81,7 @@ export class ChatService {
 			custom,
 			timings_per_token,
 			// Config options
+			enableThinking,
 			disableReasoningParsing,
 			excludeReasoningFromContext
 		} = options;
@@ -199,6 +200,13 @@ export class ChatService {
 			} catch (error) {
 				console.warn('Failed to parse custom parameters:', error);
 			}
+		}
+
+		if (enableThinking !== undefined) {
+			requestBody.chat_template_kwargs = {
+				...requestBody.chat_template_kwargs,
+				enable_thinking: enableThinking
+			};
 		}
 
 		try {

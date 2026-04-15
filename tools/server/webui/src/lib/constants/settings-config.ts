@@ -9,6 +9,7 @@ export const SETTING_CONFIG_DEFAULT: Record<string, string | number | boolean | 
 	showSystemMessage: true,
 	theme: ColorMode.SYSTEM,
 	showThoughtInProgress: false,
+	enableThinking: true,
 	disableReasoningParsing: false,
 	excludeReasoningFromContext: false,
 	showRawOutputSwitch: false,
@@ -108,6 +109,8 @@ export const SETTING_CONFIG_INFO: Record<string, string> = {
 	max_tokens: 'The maximum number of token per output. Use -1 for infinite (no limit).',
 	custom: 'Custom JSON parameters to send to the API. Must be valid JSON format.',
 	showThoughtInProgress: 'Expand thought process by default when generating messages.',
+	enableThinking:
+		'Enable thinking/reasoning mode for the model. When disabled, the model will not use thinking tags even if supported by the chat template.',
 	disableReasoningParsing:
 		'Send reasoning_format=none so the server returns thinking tokens inline instead of extracting them into a separate field.',
 	excludeReasoningFromContext:
